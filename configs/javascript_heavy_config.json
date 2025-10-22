@@ -1,0 +1,23 @@
+{
+  "city_name": "JavaScript-Heavy Portal",
+  "description": "Configuration for city permit portals that require JavaScript rendering",
+  "selectors": {
+    "permit_container": "div.permit-card",
+    "permit_number": "h3.permit-id",
+    "permit_type": "p.type",
+    "address": "p.location",
+    "status": "span.badge",
+    "issue_date": "time[datetime]@datetime",
+    "description": "p.description",
+    "applicant": "div.applicant-info span.name",
+    "value": "span.permit-value",
+    "detail_link": "a.view-details@href",
+    "next_page": "button.next-page"
+  },
+  "scraper_settings": {
+    "rate_limit": 3.0,
+    "timeout": 45,
+    "use_selenium": true,
+    "headless": true
+  }
+}

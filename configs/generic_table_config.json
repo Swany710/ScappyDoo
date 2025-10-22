@@ -1,0 +1,21 @@
+{
+  "city_name": "Generic Table-Based City Portal",
+  "description": "Configuration for city permit portals using HTML tables",
+  "selectors": {
+    "permit_container": "table#permits tbody tr",
+    "permit_number": "td:nth-child(1)",
+    "permit_type": "td:nth-child(2)",
+    "address": "td:nth-child(3)",
+    "status": "td:nth-child(4)",
+    "issue_date": "td:nth-child(5)",
+    "applicant": "td:nth-child(6)",
+    "detail_link": "td:nth-child(1) a@href",
+    "next_page": "a[rel='next']"
+  },
+  "scraper_settings": {
+    "rate_limit": 2.0,
+    "timeout": 30,
+    "use_selenium": false,
+    "headless": true
+  }
+}
