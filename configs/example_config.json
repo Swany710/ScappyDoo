@@ -1,0 +1,29 @@
+{
+  "city_name": "Example City",
+  "description": "Example configuration template for city permit websites",
+  "selectors": {
+    "permit_container": "div.permit-item",
+    "permit_number": "span.permit-number",
+    "permit_type": "span.permit-type",
+    "address": "div.address",
+    "status": "span.status",
+    "issue_date": "span.issue-date",
+    "description": "div.description",
+    "applicant": "span.applicant",
+    "contractor": "span.contractor",
+    "value": "span.value",
+    "expiration_date": "span.expiration-date",
+    "detail_link": "a.details-link@href",
+    "next_page": "a.next-page"
+  },
+  "detail_selectors": {
+    "additional_notes": "div.notes",
+    "inspections": "div.inspections"
+  },
+  "scraper_settings": {
+    "rate_limit": 1.5,
+    "timeout": 30,
+    "use_selenium": false,
+    "headless": true
+  }
+}
