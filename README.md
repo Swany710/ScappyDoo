@@ -1,17 +1,54 @@
-# ScappyDoo
+# ScappyDoo 🐕
 
 A flexible and configurable web scraper for extracting permit information from city and municipal websites.
 
+**Now with a Modern GUI!** No command-line experience needed!
+
+## 🎯 Two Ways to Use ScappyDoo
+
+### 1. GUI Application (Recommended for Most Users)
+**Easy-to-use graphical interface - just point and click!**
+
+Launch the app:
+```bash
+# Windows: Double-click run_app.bat
+# Linux/Mac:
+./run_app.sh
+```
+
+The app opens in your browser with:
+- 🖱️ Point-and-click interface
+- 📊 Live data preview and visualizations
+- ⚙️ Visual configuration builder
+- 💾 One-click export to CSV/JSON/Excel
+- 📈 Automatic summary statistics
+
+**See [GUI_QUICKSTART.md](GUI_QUICKSTART.md) for detailed GUI instructions!**
+
+### 2. Command-Line Interface (For Developers & Automation)
+Traditional CLI for scripting and automation.
+
+```bash
+python main.py -c configs/example_config.json \
+               -u "https://city.gov/permits" \
+               -o permits.csv
+```
+
+---
+
 ## Features
 
-- **Configurable CSS Selectors**: Easily adapt to different city website structures
-- **Multiple Export Formats**: Export data to JSON, CSV, or Excel
-- **Rate Limiting**: Respectful scraping with configurable request delays
-- **Error Handling**: Robust retry logic and error recovery
-- **JavaScript Support**: Optional Selenium integration for dynamic websites
-- **Pagination**: Automatic handling of multi-page permit listings
-- **Detail Scraping**: Extract additional information from individual permit pages
-- **Summary Statistics**: Generate insights about scraped permit data
+- **🖥️ Modern GUI**: User-friendly web interface (no coding required!)
+- **⚙️ Visual Configuration Builder**: Create configs without editing JSON
+- **🎯 Configurable CSS Selectors**: Adapt to any city website structure
+- **📊 Data Visualization**: Charts and graphs of permit statistics
+- **💾 Multiple Export Formats**: CSV, JSON, Excel with one click
+- **🔄 Rate Limiting**: Respectful scraping with configurable delays
+- **🛡️ Error Handling**: Robust retry logic and error recovery
+- **🌐 JavaScript Support**: Selenium integration for dynamic websites
+- **📑 Pagination**: Automatic multi-page handling
+- **🔍 Detail Scraping**: Extract additional information from permit pages
+- **📈 Summary Statistics**: Automatic insights and analytics
 
 ## Installation
 
@@ -27,6 +64,22 @@ pip install -r requirements.txt
 ```
 
 ## Quick Start
+
+### GUI Mode (Recommended)
+
+**Windows:**
+```bash
+run_app.bat
+```
+
+**Linux/Mac:**
+```bash
+./run_app.sh
+```
+
+Then follow the in-app guide!
+
+### CLI Mode
 
 1. **Create a configuration file** for your target city website (see Configuration section below)
 
@@ -152,16 +205,21 @@ Three example configurations are provided in the `configs/` directory:
 
 ```
 ScappyDoo/
+├── app.py                  # 🖥️ GUI Application (Streamlit)
+├── main.py                 # Command-line interface
 ├── scraper.py              # Base scraper with rate limiting and error handling
 ├── permit_scraper.py       # Permit-specific scraping logic
 ├── exporters.py            # Data export utilities (JSON, CSV, Excel)
-├── main.py                 # Command-line interface
+├── example_usage.py        # Programmatic usage examples
+├── run_app.sh              # 🚀 GUI launcher (Linux/Mac)
+├── run_app.bat             # 🚀 GUI launcher (Windows)
 ├── configs/                # Configuration files
 │   ├── example_config.json
 │   ├── generic_table_config.json
 │   └── javascript_heavy_config.json
 ├── requirements.txt        # Python dependencies
-└── README.md              # This file
+├── README.md               # This file
+└── GUI_QUICKSTART.md       # 📖 GUI User Guide
 ```
 
 ## Advanced Usage
